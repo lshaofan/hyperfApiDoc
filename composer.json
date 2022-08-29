@@ -1,0 +1,51 @@
+{
+  "name": "gb-hyperf/api-doc",
+  "description": "A swagger library for Hyperf.",
+  "minimum-stability": "stable",
+  "keywords": [
+    "php",
+    "docs",
+    "hyperf",
+    "swagger",
+    "hyperf swagger"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "liushaofan",
+      "email": "liushaofan@greenbirds.cn",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "hyperf/command": "~3.0.0",
+    "zircote/swagger-php": "^4.4"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "hyperf/devtool": "~3.0.0",
+    "hyperf/ide-helper": "~3.0.0",
+    "hyperf/testing": "~3.0.0",
+    "phpstan/phpstan": "^1.0",
+    "swoole/ide-helper": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gb\\ApiDocs\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": "co-phpunit -c phpunit.xml --colors=always",
+    "analyse": "phpstan analyse --memory-limit 1024M -l 0 ./src",
+    "cs-fix": "php-cs-fixer fix $1"
+  },
+  "extra": {
+    "hyperf": {
+      "config": "Gb\\ApiDocs\\ConfigProvider"
+    }
+  }
+}

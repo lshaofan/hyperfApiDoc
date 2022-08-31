@@ -17,5 +17,5 @@ php bin/hyperf.php vendor:publish gb-hyperf/api-doc
 
 - 随框架启动自动扫描生成api文件 runtime/openapi.json
 - 自动路由 /api-doc 获取api文档
-- 
+- 浏览器打开：
   http://localhost:9501/api-doc

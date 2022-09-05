@@ -27,7 +27,7 @@ class AfterWorkerStartListener implements ListenerInterface
     {
         return [
             AfterWorkerStart::class,
-            MainCoroutineServerStart::class,        ];
+            MainCoroutineServerStart::class, ];
     }
 
     public function process(object $event): void
